@@ -1,0 +1,5 @@
+.login-container { max-width: 520px; margin: 2rem auto; }
+.login-card { padding: 2rem; border-radius: 1rem; border: 1px solid #eee; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.login-card h3 { margin-bottom: 1rem; font-weight: 700; }
+.login-card input { border-radius: .5rem; margin-bottom: .75rem; }
+.login-card button { margin-top: .5rem; }

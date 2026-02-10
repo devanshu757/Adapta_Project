@@ -1,0 +1,5 @@
+.project-detail-title { font-size: 1.8rem; font-weight: 600; }
+.task-form input { border-radius: .5rem; }
+.task-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.task-board .card { padding: 1rem; }
+.task-board .card h5 { font-size: 1.1rem; }
