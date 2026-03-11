@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/adapta}
+      database: adapta
+
+firebase:
+  # Download from Firebase Console → Project Settings → Service Accounts → Generate new private key
+  # Place the file at backend/firebase-service-account.json
+  service-account-path: ${FIREBASE_SERVICE_ACCOUNT_PATH:firebase-service-account.json}
+
+gemini:
+  # Get your key from https://aistudio.google.com/app/apikey
+  api-key: ${GEMINI_API_KEY:YOUR_GEMINI_API_KEY_HERE}
+  endpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent
+
+cors:
+  allowed-origins: http://localhost:3000,http://localhost:3001
+
+logging:
+  level:
+    com.adapta: DEBUG
+    org.springframework.security: WARN
