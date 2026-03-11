@@ -1,0 +1,139 @@
+/* =============================================
+   Onboarding Page Styles
+   ============================================= */
+
+.onboarding-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-base);
+  padding: var(--space-6);
+}
+
+.onboarding-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  width: 100%;
+  max-width: 680px;
+  overflow: hidden;
+}
+
+/* ─── Step header ───────────────────────────── */
+.onboarding-header {
+  padding: var(--space-8) var(--space-8) var(--space-6);
+  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-2) 100%);
+}
+
+.onboarding-header h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+  letter-spacing: -0.02em;
+}
+
+.onboarding-header p {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+/* ─── Step indicator ────────────────────────── */
+.onboarding-steps {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.onboarding-step-dot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-muted);
+}
+
+.onboarding-step-dot.active  { color: var(--color-primary); }
+.onboarding-step-dot.done    { color: var(--color-success); }
+
+.onboarding-step-num {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  background: var(--bg-surface-2);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border-color);
+  transition: all var(--transition-base);
+}
+
+.onboarding-step-dot.active .onboarding-step-num {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px var(--color-primary-glow);
+}
+
+.onboarding-step-dot.done .onboarding-step-num {
+  background: var(--color-success);
+  color: white;
+  border-color: var(--color-success);
+}
+
+.onboarding-step-connector {
+  flex: 1;
+  height: 1.5px;
+  background: var(--border-color);
+  align-self: center;
+  margin: 0 var(--space-1);
+}
+
+/* Progress bar */
+.onboarding-progress-bar {
+  height: 4px;
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-4);
+  overflow: hidden;
+}
+
+.onboarding-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+/* ─── Step body ─────────────────────────────── */
+.onboarding-body {
+  padding: var(--space-8);
+}
+
+.onboarding-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.onboarding-form-grid .span-2 {
+  grid-column: span 2;
+}
+
+/* ─── Footer ────────────────────────────────── */
+.onboarding-footer {
+  padding: var(--space-5) var(--space-8);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .onboarding-form-grid { grid-template-columns: 1fr; }
+  .onboarding-form-grid .span-2 { grid-column: span 1; }
+}
